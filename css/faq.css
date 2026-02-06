@@ -1,0 +1,147 @@
+/* ============================================
+   FAQ PAGE STYLES
+   ============================================ */
+
+/* --- Page Hero --- */
+.page-hero {
+  position: relative;
+  padding: 9rem 0 3.5rem;
+  overflow: hidden;
+}
+
+.page-hero__geo {
+  position: absolute;
+  inset: 0;
+}
+
+.page-hero h1 {
+  margin-bottom: 0;
+}
+
+/* --- Accordion --- */
+.accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion__item {
+  border-bottom: 1px solid var(--border);
+}
+
+.accordion__item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.accordion__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-body);
+  transition: all var(--transition);
+}
+
+.accordion__trigger:hover {
+  padding-left: 0.25rem;
+}
+
+.accordion__question {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--navy);
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.accordion__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  color: var(--text-muted);
+  transition: all var(--transition);
+}
+
+.accordion__trigger:hover .accordion__icon {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+.accordion__icon-v {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.accordion__item.active .accordion__icon-v {
+  transform: scaleY(0);
+  opacity: 0;
+}
+
+.accordion__item.active .accordion__icon {
+  border-color: var(--amber);
+  color: var(--amber);
+  background: rgba(212, 160, 62, 0.06);
+}
+
+.accordion__panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion__answer {
+  padding-bottom: 1.5rem;
+}
+
+.accordion__answer p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  max-width: 100%;
+}
+
+.accordion__answer a {
+  color: var(--amber-dark);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.accordion__answer a:hover {
+  color: var(--amber);
+}
+
+/* --- CTA Bottom --- */
+.cta-bottom {
+  padding: 3.5rem 0;
+}
+
+.cta-bottom h2 {
+  margin-bottom: 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 7rem 0 2.5rem;
+  }
+
+  .accordion__question {
+    font-size: 1.05rem;
+  }
+
+  .accordion__trigger {
+    padding: 1.25rem 0;
+  }
+}
