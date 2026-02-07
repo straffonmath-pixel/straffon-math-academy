@@ -156,7 +156,7 @@
   border-radius: 50%;
   background: linear-gradient(135deg, var(--amber) 0%, var(--amber-light) 100%);
   padding: 4px;
-  box-shadow: 0 4px 20px rgba(212, 160, 62, 0.2);
+  box-shadow: 0 4px 20px rgba(193, 127, 89, 0.2);
 }
 
 .about-brief__img {

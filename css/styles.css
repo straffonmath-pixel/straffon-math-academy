@@ -3,7 +3,7 @@
    ============================================ */
 
 /* --- Fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Outfit:wght@300;400;500;600;700&display=swap');
 
 /* --- Reset & Base --- */
 *, *::before, *::after {
@@ -19,9 +19,9 @@
   --cream: #faf8f5;
   --cream-dark: #f5f3f0;
   --warm-white: #fefdfb;
-  --amber: #d4a03e;
-  --amber-light: #e0b85a;
-  --amber-dark: #b8872e;
+  --amber: #c17f59;
+  --amber-light: #d4956e;
+  --amber-dark: #a56a47;
   --text-primary: #1a2e4c;
   --text-secondary: #4a5568;
   --text-muted: #718096;
@@ -36,7 +36,7 @@
   --radius-md: 12px;
   --radius-lg: 20px;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'Outfit', -apple-system, sans-serif;
 }
 
@@ -78,7 +78,7 @@ body::before {
 /* --- Typography --- */
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.2;
 }
 
@@ -153,19 +153,19 @@ section {
 .btn--primary:hover {
   background: var(--amber);
   color: var(--navy);
-  box-shadow: 0 4px 16px rgba(212, 160, 62, 0.3);
+  box-shadow: 0 4px 16px rgba(193, 127, 89, 0.3);
   transform: translateY(-1px);
 }
 
 .btn--amber {
   background: var(--amber);
   color: var(--navy);
-  box-shadow: 0 2px 8px rgba(212, 160, 62, 0.25);
+  box-shadow: 0 2px 8px rgba(193, 127, 89, 0.25);
 }
 
 .btn--amber:hover {
   background: var(--amber-light);
-  box-shadow: 0 4px 20px rgba(212, 160, 62, 0.4);
+  box-shadow: 0 4px 20px rgba(193, 127, 89, 0.4);
   transform: translateY(-1px);
 }
 
@@ -425,7 +425,7 @@ section {
 .geo-circle {
   position: absolute;
   border-radius: 50%;
-  border: 1.5px solid rgba(212, 160, 62, 0.15);
+  border: 1.5px solid rgba(193, 127, 89, 0.15);
   pointer-events: none;
 }
 
@@ -434,14 +434,14 @@ section {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: rgba(212, 160, 62, 0.2);
+  background: rgba(193, 127, 89, 0.2);
   pointer-events: none;
 }
 
 .geo-line {
   position: absolute;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(212, 160, 62, 0.15), transparent);
+  background: linear-gradient(90deg, transparent, rgba(193, 127, 89, 0.15), transparent);
   pointer-events: none;
 }
 

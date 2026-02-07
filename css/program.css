@@ -43,7 +43,7 @@
   height: 26px;
   min-width: 26px;
   border-radius: 50%;
-  background: rgba(212, 160, 62, 0.12);
+  background: rgba(193, 127, 89, 0.12);
   color: var(--amber-dark);
   font-weight: 700;
   font-size: 0.8rem;
@@ -65,7 +65,7 @@
   display: block;
   font-family: var(--font-display);
   font-size: 4rem;
-  color: rgba(212, 160, 62, 0.15);
+  color: rgba(193, 127, 89, 0.15);
   line-height: 1;
   margin-bottom: 0.75rem;
 }
