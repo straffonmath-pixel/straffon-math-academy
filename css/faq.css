@@ -1,5 +1,5 @@
 /* ============================================
-   FAQ PAGE STYLES
+   FAQ PAGE STYLES (v3)
    ============================================ */
 
 /* --- Page Hero --- */
@@ -7,11 +7,6 @@
   position: relative;
   padding: 9rem 0 3.5rem;
   overflow: hidden;
-}
-
-.page-hero__geo {
-  position: absolute;
-  inset: 0;
 }
 
 .page-hero h1 {
@@ -25,11 +20,11 @@
 }
 
 .accordion__item {
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-light);
 }
 
 .accordion__item:first-child {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border-light);
 }
 
 .accordion__trigger {
@@ -44,7 +39,7 @@
   cursor: pointer;
   text-align: left;
   font-family: var(--font-body);
-  transition: all var(--transition);
+  transition: all 0.15s ease;
 }
 
 .accordion__trigger:hover {
@@ -53,8 +48,8 @@
 
 .accordion__question {
   font-family: var(--font-body);
-  font-size: 1.15rem;
-  color: var(--navy);
+  font-size: 1.1rem;
+  color: var(--text-heading);
   line-height: 1.4;
   font-weight: 600;
 }
@@ -67,14 +62,14 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  border: 1.5px solid var(--border);
-  color: var(--text-muted);
-  transition: all var(--transition);
+  border: 1.5px solid var(--border-light);
+  color: var(--text-light);
+  transition: all 0.15s ease;
 }
 
 .accordion__trigger:hover .accordion__icon {
-  border-color: var(--amber);
-  color: var(--amber);
+  border-color: var(--teal-600);
+  color: var(--teal-600);
 }
 
 .accordion__icon-v {
@@ -89,9 +84,9 @@
 }
 
 .accordion__item.active .accordion__icon {
-  border-color: var(--amber);
-  color: var(--amber);
-  background: rgba(193, 127, 89, 0.06);
+  border-color: var(--teal-600);
+  color: var(--teal-600);
+  background: var(--teal-50);
 }
 
 .accordion__panel {
@@ -107,24 +102,24 @@
 .accordion__answer p {
   font-size: 1rem;
   line-height: 1.75;
-  color: var(--text-secondary);
+  color: var(--text-body);
   max-width: 100%;
 }
 
 .accordion__answer a {
-  color: var(--amber-dark);
+  color: var(--teal-700);
   font-weight: 500;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 .accordion__answer a:hover {
-  color: var(--amber);
+  color: var(--teal-600);
 }
 
 /* --- CTA Bottom --- */
 .cta-bottom {
-  padding: 3.5rem 0;
+  padding: 56px 0;
 }
 
 .cta-bottom h2 {
@@ -138,7 +133,7 @@
   }
 
   .accordion__question {
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 
   .accordion__trigger {

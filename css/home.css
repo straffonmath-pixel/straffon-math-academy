@@ -1,93 +1,207 @@
 /* ============================================
-   HOME PAGE STYLES
+   HOME PAGE STYLES (v3)
    ============================================ */
 
-/* --- Hero --- */
+/* --- Hero (light with graph-paper grid) --- */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 85vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(165deg, var(--navy) 0%, #1e3a5f 35%, var(--cream) 100%);
+  background: var(--warm-50);
+  background-image:
+    linear-gradient(rgba(15, 26, 46, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 26, 46, 0.025) 1px, transparent 1px);
+  background-size: 32px 32px;
   overflow: hidden;
   padding-top: 5rem;
 }
 
-.hero__geo {
+/* Math symbol (∑) — the ONLY decorative math element on the site */
+.hero::after {
+  content: '\2211';
   position: absolute;
-  inset: 0;
-  overflow: hidden;
+  bottom: -20px;
+  right: 60px;
+  font-family: 'Fraunces', serif;
+  font-size: 180px;
+  font-weight: 300;
+  color: rgba(46, 196, 182, 0.045);
+  pointer-events: none;
 }
 
 .hero__content {
   position: relative;
   z-index: 1;
-  max-width: 680px;
-}
-
-.hero__headline {
-  color: #fff;
-  font-size: clamp(2.2rem, 4.5vw, 3.25rem);
-  margin-bottom: 1.25rem;
-  line-height: 1.15;
+  max-width: 600px;
 }
 
 .hero__brand {
   display: block;
-  font-family: var(--font-display);
-  font-size: clamp(1rem, 1.5vw, 1.15rem);
-  font-weight: 400;
-  color: var(--amber);
-  letter-spacing: 0.06em;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--teal-600);
+  letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 0.75rem;
+  margin-bottom: 16px;
+}
+
+.hero__headline {
+  color: var(--text-heading);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: 18px;
+  line-height: 1.12;
 }
 
 .hero__sub {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 1.2rem;
+  color: var(--text-body);
+  font-size: 17px;
   line-height: 1.7;
   margin-bottom: 1.5rem;
-  max-width: 520px;
+  max-width: 480px;
 }
 
 .hero__launch {
-  margin-bottom: 2.25rem;
+  margin-bottom: 2rem;
 }
 
-.hero__cta {
-  font-size: 1.05rem;
+.hero__cta-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-/* --- Offers --- */
+.hero__meta {
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* --- Offers (What We Offer) --- */
 .offers__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem;
-  margin-top: 3.5rem;
+  gap: 14px;
+  margin-top: 3rem;
 }
 
 .offers__card {
   text-align: center;
-  padding: 2.5rem 1.75rem;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .offers__icon {
-  margin-bottom: 1.25rem;
-  display: flex;
-  justify-content: center;
+  margin-bottom: 14px;
 }
 
 .offers__card h3 {
-  margin-bottom: 0.5rem;
+  font-size: 15px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--text-heading);
+  margin-bottom: 4px;
 }
 
 .offers__card p {
   margin: 0 auto;
-  font-size: 0.98rem;
+  font-size: 13px;
+  color: var(--text-secondary);
 }
 
-/* --- Tracks (detailed) --- */
+/* --- About Brief --- */
+.about-brief {
+  background: var(--navy-900);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Circle decoration */
+.about-brief::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -30px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 1px solid rgba(46, 196, 182, 0.07);
+  pointer-events: none;
+}
+
+.about-brief__inner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.about-brief__label {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--teal-400);
+  margin-bottom: 10px;
+}
+
+.about-brief__img-wrap {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.12);
+}
+
+.about-brief__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-brief__text h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.5vw, 1.75rem);
+  font-weight: 600;
+  color: var(--text-on-dark);
+  line-height: 1.25;
+  margin-bottom: 12px;
+  max-width: 480px;
+}
+
+.about-brief__text p {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 480px;
+  color: var(--text-muted-dark);
+}
+
+.about-brief__link {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 13px 28px;
+  border-radius: 8px;
+  background: var(--teal-500);
+  color: var(--navy-900);
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+.about-brief__link:hover {
+  background: var(--teal-400);
+}
+
+/* --- Track Cards (shared by home and program) --- */
 .tracks-detail__primary {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -95,8 +209,20 @@
 }
 
 .tracks-detail__card--primary {
-  border-left: 3px solid var(--amber);
-  padding: 2rem 1.75rem;
+  position: relative;
+  overflow: hidden;
+  padding: 24px;
+}
+
+/* Teal gradient top bar on track cards */
+.tracks-detail__card--primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--teal-600), var(--teal-400));
 }
 
 .tracks-detail__card--primary h3 {
@@ -104,10 +230,9 @@
 }
 
 .tracks-detail__tagline {
-  font-size: 0.92rem;
-  color: var(--amber-dark);
+  font-size: 13px;
+  color: var(--text-secondary);
   font-weight: 500;
-  font-style: italic;
 }
 
 .tracks-detail__secondary {
@@ -118,95 +243,77 @@
 }
 
 .tracks-detail__card--secondary {
-  background: var(--cream);
+  background: var(--white);
+  border: 1px solid var(--border-card);
   box-shadow: var(--shadow-sm);
-  padding: 2rem 1.75rem;
+  padding: 24px;
+  border-radius: var(--radius-md);
 }
 
 .tracks-detail__card--secondary h3 {
   margin-bottom: 0.25rem;
 }
 
+/* Track level indicator bars */
+.track-level {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 14px;
+}
+
+.track-bar {
+  width: 24px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--warm-200);
+}
+
+.track-bar.active {
+  background: var(--teal-500);
+}
+
 .tracks__note {
   font-size: 0.92rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
 }
 
 .tracks__link {
-  color: var(--amber-dark);
+  color: var(--teal-700);
   font-weight: 500;
-  transition: color var(--transition);
+  transition: color 0.15s;
 }
 
 .tracks__link:hover {
-  color: var(--amber);
-}
-
-/* --- About Brief --- */
-.about-brief__inner {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 3rem;
-  align-items: center;
-}
-
-.about-brief__img-wrap {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--amber) 0%, var(--amber-light) 100%);
-  padding: 4px;
-  box-shadow: 0 4px 20px rgba(193, 127, 89, 0.2);
-}
-
-.about-brief__img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.about-brief__text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  max-width: 480px;
-}
-
-.about-brief__link {
-  display: inline-block;
-  color: var(--amber-dark);
-  font-weight: 500;
-  font-size: 0.98rem;
-  transition: color var(--transition);
-}
-
-.about-brief__link:hover {
-  color: var(--amber);
+  color: var(--teal-600);
 }
 
 /* --- CTA Final --- */
 .cta-final {
   position: relative;
-  padding: 4rem 0;
+  padding: 56px 0;
   overflow: hidden;
 }
 
-.cta-final__texture {
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-  pointer-events: none;
-}
-
 .cta-final h2 {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 7rem 0 4rem;
+  }
+
+  .hero::after {
+    font-size: 120px;
+    right: 20px;
+    bottom: -10px;
+  }
+
   .offers__grid {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 1rem;
   }
 
   .tracks-detail__primary {
@@ -233,7 +340,16 @@
     height: 140px;
   }
 
+  .about-brief__text h3 {
+    margin: 0 auto 12px;
+  }
+
   .about-brief__text p {
     margin: 0 auto;
+  }
+
+  .hero__cta-row {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
