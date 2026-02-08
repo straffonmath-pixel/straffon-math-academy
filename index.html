@@ -6,7 +6,7 @@
   <title>Straffon Math Academy — Online Math Coaching for Grades 6–8</title>
   <meta name="description" content="Small-group online math coaching for Grades 6–8. Ability-based placement. Four students per class. Launching August 2026.">
   <link rel="stylesheet" href="css/styles.css?v=7">
-  <link rel="stylesheet" href="css/home.css?v=11">
+  <link rel="stylesheet" href="css/home.css?v=12">
   <script src="https://tally.so/widgets/embed.js" async></script>
 </head>
 <body>
@@ -64,50 +64,143 @@
                   <div class="hero__card-track">Momentum Track · Grade 7</div>
                 </div>
               </div>
-              <div class="hero__card-badge">↑ On Track</div>
+              <div class="hero__card-badge">↑ Accelerating</div>
+            </div>
+
+            <!-- Legend -->
+            <div class="hero__card-legend">
+              <div class="hero__card-legend-item">
+                <span class="hero__card-legend-dot hero__card-legend-dot--student"></span>
+                Sofia
+              </div>
+              <div class="hero__card-legend-item">
+                <span class="hero__card-legend-dot hero__card-legend-dot--avg"></span>
+                Grade avg
+              </div>
             </div>
 
             <div class="hero__card-chart">
-              <svg viewBox="0 0 540 120" width="100%">
-                <line x1="0" y1="30" x2="540" y2="30" stroke="#F0F2F5" stroke-width="1"/>
-                <line x1="0" y1="60" x2="540" y2="60" stroke="#F0F2F5" stroke-width="1"/>
-                <line x1="0" y1="90" x2="540" y2="90" stroke="#F0F2F5" stroke-width="1"/>
-                <path d="M0,100 L60,95 L120,86 L180,78 L240,66 L300,55 L360,42 L420,32 L480,22 L540,14 L540,120 L0,120 Z"
-                      fill="url(#heroAreaGrad)" opacity="0.12"/>
-                <path d="M0,100 L60,95 L120,86 L180,78 L240,66 L300,55 L360,42 L420,32 L480,22 L540,14"
-                      stroke="url(#heroLineGrad)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M0,100 L540,40" stroke="#E5E7EB" stroke-width="1.5" fill="none" stroke-dasharray="5,4"/>
-                <circle cx="0" cy="100" r="3" fill="white" stroke="#1A9E94" stroke-width="2"/>
-                <circle cx="120" cy="86" r="3" fill="white" stroke="#1A9E94" stroke-width="2"/>
-                <circle cx="240" cy="66" r="3" fill="white" stroke="#2EC4B6" stroke-width="2"/>
-                <circle cx="360" cy="42" r="3" fill="white" stroke="#2EC4B6" stroke-width="2"/>
-                <circle cx="480" cy="22" r="4.5" fill="#2EC4B6" stroke="white" stroke-width="2.5"/>
-                <rect x="458" y="2" width="44" height="18" rx="5" fill="#0B1222"/>
-                <text x="480" y="14" fill="white" font-size="10" font-family="DM Sans" font-weight="700" text-anchor="middle">238</text>
+              <svg viewBox="0 0 580 220" width="100%">
                 <defs>
+                  <linearGradient id="bandHigh" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.45"/>
+                    <stop offset="100%" stop-color="#60a5fa" stop-opacity="0.3"/>
+                  </linearGradient>
+                  <linearGradient id="bandMedHigh" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#34d399" stop-opacity="0.4"/>
+                    <stop offset="100%" stop-color="#6ee7b7" stop-opacity="0.3"/>
+                  </linearGradient>
+                  <linearGradient id="bandMed" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.4"/>
+                    <stop offset="100%" stop-color="#fde68a" stop-opacity="0.3"/>
+                  </linearGradient>
+                  <linearGradient id="bandMedLow" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#fb923c" stop-opacity="0.4"/>
+                    <stop offset="100%" stop-color="#fdba74" stop-opacity="0.3"/>
+                  </linearGradient>
+                  <linearGradient id="bandLow" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#f87171" stop-opacity="0.35"/>
+                    <stop offset="100%" stop-color="#fca5a5" stop-opacity="0.25"/>
+                  </linearGradient>
                   <linearGradient id="heroLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
                     <stop offset="0%" stop-color="#148078"/>
                     <stop offset="100%" stop-color="#4DD9CC"/>
                   </linearGradient>
+                  <filter id="lineGlow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+                    <feMerge>
+                      <feMergeNode in="blur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
                   <linearGradient id="heroAreaGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#2EC4B6"/>
-                    <stop offset="100%" stop-color="#2EC4B6" stop-opacity="0"/>
+                    <stop offset="0%" stop-color="#2EC4B6" stop-opacity="0.18"/>
+                    <stop offset="100%" stop-color="#2EC4B6" stop-opacity="0.02"/>
                   </linearGradient>
                 </defs>
+
+                <!-- Stacked color bands -->
+                <path d="M40,20 C120,22 200,18 280,20 C360,22 440,18 540,20 L540,50 C440,55 360,52 280,56 C200,52 120,58 40,54 Z" fill="url(#bandHigh)"/>
+                <path d="M40,54 C120,58 200,52 280,56 C360,52 440,55 540,50 L540,92 C440,96 360,90 280,94 C200,90 120,96 40,92 Z" fill="url(#bandMedHigh)"/>
+                <path d="M40,92 C120,96 200,90 280,94 C360,90 440,96 540,92 L540,128 C440,132 360,126 280,130 C200,128 120,134 40,130 Z" fill="url(#bandMed)"/>
+                <path d="M40,130 C120,134 200,128 280,130 C360,126 440,132 540,128 L540,160 C440,164 360,158 280,162 C200,158 120,164 40,160 Z" fill="url(#bandMedLow)"/>
+                <path d="M40,160 C120,164 200,158 280,162 C360,158 440,164 540,160 L540,200 L40,200 Z" fill="url(#bandLow)"/>
+
+                <!-- Grid lines -->
+                <line x1="40" y1="50" x2="540" y2="50" stroke="#e5e7eb" stroke-width="0.5" opacity="0.3"/>
+                <line x1="40" y1="92" x2="540" y2="92" stroke="#e5e7eb" stroke-width="0.5" opacity="0.3"/>
+                <line x1="40" y1="128" x2="540" y2="128" stroke="#e5e7eb" stroke-width="0.5" opacity="0.3"/>
+                <line x1="40" y1="160" x2="540" y2="160" stroke="#e5e7eb" stroke-width="0.5" opacity="0.3"/>
+                <line x1="140" y1="20" x2="140" y2="200" stroke="#e5e7eb" stroke-width="0.5" opacity="0.2"/>
+                <line x1="215" y1="20" x2="215" y2="200" stroke="#e5e7eb" stroke-width="0.5" opacity="0.2"/>
+                <line x1="290" y1="20" x2="290" y2="200" stroke="#e5e7eb" stroke-width="0.5" opacity="0.2"/>
+                <line x1="365" y1="20" x2="365" y2="200" stroke="#e5e7eb" stroke-width="0.5" opacity="0.2"/>
+                <line x1="440" y1="20" x2="440" y2="200" stroke="#e5e7eb" stroke-width="0.5" opacity="0.2"/>
+                <line x1="515" y1="20" x2="515" y2="200" stroke="#e5e7eb" stroke-width="0.5" opacity="0.2"/>
+
+                <!-- Y-axis labels -->
+                <text x="32" y="24" fill="#9ca3af" font-size="9" font-family="DM Sans" text-anchor="end">260</text>
+                <text x="32" y="54" fill="#9ca3af" font-size="9" font-family="DM Sans" text-anchor="end">248</text>
+                <text x="32" y="96" fill="#9ca3af" font-size="9" font-family="DM Sans" text-anchor="end">237</text>
+                <text x="32" y="132" fill="#9ca3af" font-size="9" font-family="DM Sans" text-anchor="end">226</text>
+                <text x="32" y="164" fill="#9ca3af" font-size="9" font-family="DM Sans" text-anchor="end">215</text>
+                <text x="32" y="204" fill="#9ca3af" font-size="9" font-family="DM Sans" text-anchor="end">200</text>
+
+                <!-- X-axis labels — Aug & May across 3 school years -->
+                <text x="65" y="215" fill="#9ca3af" font-size="9" font-family="DM Sans" text-anchor="middle">Aug '23</text>
+                <text x="155" y="215" fill="#9ca3af" font-size="9" font-family="DM Sans" text-anchor="middle">May '24</text>
+                <text x="245" y="215" fill="#9ca3af" font-size="9" font-family="DM Sans" text-anchor="middle">Aug '24</text>
+                <text x="335" y="215" fill="#9ca3af" font-size="9" font-family="DM Sans" text-anchor="middle">May '25</text>
+                <text x="425" y="215" fill="#9ca3af" font-size="9" font-family="DM Sans" text-anchor="middle">Aug '25</text>
+                <text x="515" y="215" fill="#9ca3af" font-size="9" font-family="DM Sans" text-anchor="middle">May '26</text>
+
+                <!-- Grade average line (dashed) -->
+                <path d="M65,130 L155,126 L245,122 L335,118 L425,114 L515,110" stroke="#d1d5db" stroke-width="1.5" fill="none" stroke-dasharray="5,4" stroke-linecap="round"/>
+
+                <!-- "Joined SMA" marker -->
+                <line x1="470" y1="25" x2="470" y2="195" stroke="#2EC4B6" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+                <rect x="440" y="25" width="60" height="16" rx="4" fill="#2EC4B6" opacity="0.12"/>
+                <text x="470" y="35" fill="#1A9E94" font-size="8" font-family="DM Sans" font-weight="600" text-anchor="middle">Joined SMA</text>
+
+                <!-- Student line: 217→224→227→218(dip)→229→247(steep jump) -->
+                <path d="M65,149 L155,128 L245,119 L335,146 L425,113 L515,59 L515,200 L65,200 Z" fill="url(#heroAreaGrad)"/>
+                <path d="M65,149 L155,128 L245,119 L335,146 L425,113 L515,59" stroke="url(#heroLineGrad)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#lineGlow)"/>
+
+                <!-- Data points -->
+                <circle cx="65" cy="149" r="4" fill="#fff" stroke="#1A9E94" stroke-width="2.5"/>
+                <circle cx="155" cy="128" r="4" fill="#fff" stroke="#1A9E94" stroke-width="2.5"/>
+                <circle cx="245" cy="119" r="4" fill="#fff" stroke="#1A9E94" stroke-width="2.5"/>
+                <circle cx="335" cy="146" r="4" fill="#fff" stroke="#1A9E94" stroke-width="2.5"/>
+                <circle cx="425" cy="113" r="4" fill="#fff" stroke="#1A9E94" stroke-width="2.5"/>
+                <circle cx="515" cy="59" r="6" fill="#2EC4B6" stroke="#fff" stroke-width="3"/>
+
+                <!-- Data labels -->
+                <rect x="47" y="155" width="36" height="18" rx="5" fill="#0B1222" opacity="0.85"/>
+                <text x="65" y="167" fill="#fff" font-size="10" font-family="DM Sans" font-weight="600" text-anchor="middle">217</text>
+                <rect x="137" y="134" width="36" height="18" rx="5" fill="#0B1222" opacity="0.85"/>
+                <text x="155" y="146" fill="#fff" font-size="10" font-family="DM Sans" font-weight="600" text-anchor="middle">224</text>
+                <rect x="227" y="125" width="36" height="18" rx="5" fill="#0B1222" opacity="0.85"/>
+                <text x="245" y="137" fill="#fff" font-size="10" font-family="DM Sans" font-weight="600" text-anchor="middle">227</text>
+                <rect x="317" y="152" width="36" height="18" rx="5" fill="#0B1222" opacity="0.85"/>
+                <text x="335" y="164" fill="#fff" font-size="10" font-family="DM Sans" font-weight="600" text-anchor="middle">218</text>
+                <rect x="407" y="119" width="36" height="18" rx="5" fill="#0B1222" opacity="0.85"/>
+                <text x="425" y="131" fill="#fff" font-size="10" font-family="DM Sans" font-weight="600" text-anchor="middle">229</text>
+                <rect x="493" y="37" width="44" height="20" rx="6" fill="#1A9E94"/>
+                <text x="515" y="50" fill="#fff" font-size="11" font-family="DM Sans" font-weight="700" text-anchor="middle">247</text>
               </svg>
             </div>
 
             <div class="hero__card-stats">
               <div class="hero__card-stat">
-                <div class="hero__card-stat-val hero__card-stat-val--teal">238</div>
+                <div class="hero__card-stat-val hero__card-stat-val--teal">247</div>
                 <div class="hero__card-stat-label">RIT Score</div>
               </div>
               <div class="hero__card-stat">
-                <div class="hero__card-stat-val hero__card-stat-val--green">+12</div>
-                <div class="hero__card-stat-label">Growth</div>
+                <div class="hero__card-stat-val hero__card-stat-val--green">+18</div>
+                <div class="hero__card-stat-label">Since joining</div>
               </div>
               <div class="hero__card-stat">
-                <div class="hero__card-stat-val hero__card-stat-val--purple">92%</div>
+                <div class="hero__card-stat-val hero__card-stat-val--purple">94%</div>
                 <div class="hero__card-stat-label">Practice</div>
               </div>
             </div>

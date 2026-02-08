@@ -242,8 +242,35 @@
   border-radius: 100px;
 }
 
+/* Legend row */
+.hero__card-legend {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.hero__card-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.hero__card-legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.hero__card-legend-dot--student { background: #1A9E94; }
+.hero__card-legend-dot--avg { background: #d1d5db; }
+
 .hero__card-chart {
   margin-bottom: 20px;
+  border-radius: 14px;
+  overflow: hidden;
 }
 
 .hero__card-chart svg { width: 100%; height: auto; }
