@@ -2,16 +2,7 @@
    ABOUT PAGE STYLES (v3)
    ============================================ */
 
-/* --- Page Hero --- */
-.page-hero {
-  position: relative;
-  padding: 9rem 0 3rem;
-  overflow: hidden;
-}
-
-.page-hero h1 {
-  margin-bottom: 0;
-}
+/* Page hero handled in styles.css */
 
 /* --- Bio --- */
 .bio {
@@ -82,10 +73,6 @@
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
-  .page-hero {
-    padding: 7rem 0 2.5rem;
-  }
-
   .bio__inner {
     grid-template-columns: 1fr;
     text-align: center;
