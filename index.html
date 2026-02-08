@@ -6,7 +6,7 @@
   <title>Straffon Math Academy — Online Math Coaching for Grades 6–8</title>
   <meta name="description" content="Small-group online math coaching for Grades 6–8. Ability-based placement. Four students per class. Launching August 2026.">
   <link rel="stylesheet" href="css/styles.css?v=7">
-  <link rel="stylesheet" href="css/home.css?v=12">
+  <link rel="stylesheet" href="css/home.css?v=13">
   <script src="https://tally.so/widgets/embed.js" async></script>
 </head>
 <body>
@@ -67,8 +67,19 @@
               <div class="hero__card-badge">↑ Accelerating</div>
             </div>
 
+            <div class="hero__card-legend">
+              <div class="hero__card-legend-item">
+                <div class="hero__card-legend-dot" style="background:#1A9E94;"></div>
+                Sofia
+              </div>
+              <div class="hero__card-legend-item">
+                <div class="hero__card-legend-dot" style="background:#d1d5db;"></div>
+                Grade avg
+              </div>
+            </div>
+
             <div class="hero__card-chart">
-              <svg viewBox="0 0 580 220" width="100%">
+              <svg viewBox="0 0 580 230" width="100%">
                 <defs>
                   <linearGradient id="bandHigh" x1="0" y1="0" x2="0" y2="1">
                     <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.45"/>
@@ -126,6 +137,22 @@
                 <line x1="440" y1="20" x2="440" y2="200" stroke="#e5e7eb" stroke-width="0.5" opacity="0.2"/>
                 <line x1="515" y1="20" x2="515" y2="200" stroke="#e5e7eb" stroke-width="0.5" opacity="0.2"/>
 
+                <!-- Y-axis labels -->
+                <text x="32" y="24" fill="#9ca3af" font-size="9" font-family="DM Sans" text-anchor="end">260</text>
+                <text x="32" y="54" fill="#9ca3af" font-size="9" font-family="DM Sans" text-anchor="end">248</text>
+                <text x="32" y="96" fill="#9ca3af" font-size="9" font-family="DM Sans" text-anchor="end">237</text>
+                <text x="32" y="132" fill="#9ca3af" font-size="9" font-family="DM Sans" text-anchor="end">226</text>
+                <text x="32" y="164" fill="#9ca3af" font-size="9" font-family="DM Sans" text-anchor="end">215</text>
+                <text x="32" y="204" fill="#9ca3af" font-size="9" font-family="DM Sans" text-anchor="end">200</text>
+
+                <!-- X-axis labels -->
+                <text x="65" y="215" fill="#9ca3af" font-size="9" font-family="DM Sans" text-anchor="middle">Aug '23</text>
+                <text x="155" y="215" fill="#9ca3af" font-size="9" font-family="DM Sans" text-anchor="middle">May '24</text>
+                <text x="245" y="215" fill="#9ca3af" font-size="9" font-family="DM Sans" text-anchor="middle">Aug '24</text>
+                <text x="335" y="215" fill="#9ca3af" font-size="9" font-family="DM Sans" text-anchor="middle">May '25</text>
+                <text x="425" y="215" fill="#9ca3af" font-size="9" font-family="DM Sans" text-anchor="middle">Aug '25</text>
+                <text x="515" y="215" fill="#9ca3af" font-size="9" font-family="DM Sans" text-anchor="middle">May '26</text>
+
                 <!-- Grade average line (dashed) -->
                 <path d="M65,130 L155,126 L245,122 L335,118 L425,114 L515,110" stroke="#d1d5db" stroke-width="1.5" fill="none" stroke-dasharray="5,4" stroke-linecap="round"/>
 
@@ -138,25 +165,28 @@
                 <path d="M65,149 L155,128 L245,119 L335,146 L425,113 L515,59 L515,200 L65,200 Z" fill="url(#heroAreaGrad)"/>
                 <path d="M65,149 L155,128 L245,119 L335,146 L425,113 L515,59" stroke="url(#heroLineGrad)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#lineGlow)"/>
 
-                <!-- Data points (no number labels) -->
+                <!-- Data points -->
                 <circle cx="65" cy="149" r="4" fill="#fff" stroke="#1A9E94" stroke-width="2.5"/>
                 <circle cx="155" cy="128" r="4" fill="#fff" stroke="#1A9E94" stroke-width="2.5"/>
                 <circle cx="245" cy="119" r="4" fill="#fff" stroke="#1A9E94" stroke-width="2.5"/>
                 <circle cx="335" cy="146" r="4" fill="#fff" stroke="#1A9E94" stroke-width="2.5"/>
                 <circle cx="425" cy="113" r="4" fill="#fff" stroke="#2EC4B6" stroke-width="2.5"/>
                 <circle cx="515" cy="59" r="6" fill="#2EC4B6" stroke="#fff" stroke-width="3"/>
-              </svg>
-            </div>
 
-            <div class="hero__card-stats">
-              <div class="hero__card-stat">
-                <div class="hero__card-stat-val hero__card-stat-val--green">↑ Accelerating</div>
-                <div class="hero__card-stat-label">Growth</div>
-              </div>
-              <div class="hero__card-stat">
-                <div class="hero__card-stat-val hero__card-stat-val--purple">94%</div>
-                <div class="hero__card-stat-label">Practice</div>
-              </div>
+                <!-- Data point score labels -->
+                <rect x="47" y="155" width="36" height="18" rx="5" fill="#0B1222" opacity="0.85"/>
+                <text x="65" y="167" fill="#fff" font-size="10" font-family="DM Sans" font-weight="600" text-anchor="middle">217</text>
+                <rect x="137" y="134" width="36" height="18" rx="5" fill="#0B1222" opacity="0.85"/>
+                <text x="155" y="146" fill="#fff" font-size="10" font-family="DM Sans" font-weight="600" text-anchor="middle">224</text>
+                <rect x="227" y="125" width="36" height="18" rx="5" fill="#0B1222" opacity="0.85"/>
+                <text x="245" y="137" fill="#fff" font-size="10" font-family="DM Sans" font-weight="600" text-anchor="middle">227</text>
+                <rect x="317" y="152" width="36" height="18" rx="5" fill="#0B1222" opacity="0.85"/>
+                <text x="335" y="164" fill="#fff" font-size="10" font-family="DM Sans" font-weight="600" text-anchor="middle">218</text>
+                <rect x="407" y="119" width="36" height="18" rx="5" fill="#0B1222" opacity="0.85"/>
+                <text x="425" y="131" fill="#fff" font-size="10" font-family="DM Sans" font-weight="600" text-anchor="middle">229</text>
+                <rect x="493" y="37" width="44" height="20" rx="6" fill="#1A9E94"/>
+                <text x="515" y="50" fill="#fff" font-size="11" font-family="DM Sans" font-weight="700" text-anchor="middle">247</text>
+              </svg>
             </div>
           </div>
         </div>
