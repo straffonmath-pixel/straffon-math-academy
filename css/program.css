@@ -37,6 +37,13 @@
   margin-top: 2px;
 }
 
+.check-icon--muted {
+  background: var(--warm-100);
+  border: 1px solid var(--warm-200);
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
 /* --- Steps --- */
 .steps {
   display: grid;
