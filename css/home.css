@@ -807,6 +807,8 @@
   .hero__card-stat { padding: 8px; }
   .hero__card-stat-val { font-size: 18px; }
 
+  .hero::after { height: 40px; }
+
   /* Features */
   .features { padding: 60px 0; }
   .features__grid { grid-template-columns: 1fr; gap: 16px; }
